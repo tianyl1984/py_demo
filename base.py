@@ -1,6 +1,8 @@
 ﻿#coding:utf-8
 import os
 import time
+import math
+import sys
 
 print u"hello,中文"
 
@@ -113,3 +115,35 @@ with open("a.txt") as f:
 #文件属性
 file_stat = os.stat("a.txt")
 print time.localtime(file_stat.st_ctime)
+
+#eval exec
+r = eval("3+4")
+print r
+exec "print 'exec'"
+
+#format
+print "my name is {0},i am {1}".format("zhangsan",11)
+print "my name is {name},i am {age}".format(name="lisi",age=12)
+list = ["a1234","b1234","c1234"]
+print "a={0[0]},b={0[1]},c={0[2][0]}".format(list)
+print "PI is {m.pi},platform is {0.platform}".format(sys,m=math)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
