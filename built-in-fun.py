@@ -4,7 +4,7 @@
 ' built in function demo '
 
 from functools import reduce
-
+import types
 
 def m1(x):
     print(x)
@@ -44,8 +44,13 @@ def sort_demo():
     print(sorted([36, 5, -12, 9, -21], key=abs))
     print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))
 
+def type_demo():
+    print(type(sort_demo) == types.FunctionType)
+    print(type(abs) == types.BuiltinMethodType)
+    print(type(lambda x:x) == types.LambdaType)
 
 # map_demo()
 # reduce_demo()
 # filter_demo()
-sort_demo()
+# sort_demo()
+type_demo()
