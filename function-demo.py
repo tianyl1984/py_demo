@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import functools
+
 def m1():
     print('m1')
 
@@ -48,6 +50,11 @@ def m8(a, b=1, *nums, name, age, **kw):
     print(a, b, nums, name, age, kw)
 
 
+def m9():
+    # 创建偏函数，生成一个新函数
+    int2 = functools.partial(int, base=2)
+    print(int2('1011'))
+
 m1()
 empty()
 print(m2())
@@ -58,3 +65,5 @@ print('关键字参数:', m6(name='zhangsan', age=12))
 print('命名关键字:', m7(name='lisi', age=14), m7(
     name='wangwu'), m7(age=6, name='xiaoliu'))
 print(m8('张三', 20, 1, 2, name='lisi', age=5, birth=1988))
+print(m1.__name__)
+m9()
