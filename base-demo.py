@@ -30,6 +30,9 @@ def str_demo():
     # 字符串是可迭代的
     print(isinstance('abc', Iterable))
 
+    str = ' abc '
+    print(str.strip())
+    print(' ' in str)
 
 def op_demo():
     print('10/3=', 10 / 3)
@@ -160,4 +163,6 @@ def list_generator():
     for num in g2:
         print(num)
 
-list_generator()
+# list_generator()
+
+str_demo()

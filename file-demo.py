@@ -27,6 +27,10 @@ def m3():
         # 读取所有行，返回list
         print(f.readlines())
 
+def m4():
+    with open('./a.txt', 'a', encoding='utf-8') as f:
+        f.write("abc\n")
+        # f.writelines(["abc"])
 
 def strio_demo():
     # 只写字符流
@@ -51,6 +55,7 @@ def byteio_demo():
 # m1()
 # m2()
 # m3()
+m4()
 # strio_demo()
-byteio_demo()
+# byteio_demo()
 

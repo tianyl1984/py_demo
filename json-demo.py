@@ -41,5 +41,13 @@ def m1():
     json_str = json.dumps(stu, default=toDict)
     print(json.loads(json_str, object_hook=fromDict))
 
+def m2():
+    json_str = '{"name":"aaa","age":3,"addressList":[{"city":"bj"},{"city":"sh"}],"names":[]}'
+    user = json.loads(json_str)
+    print(user)
+    print(user["name"])
+    print(user["addressList"][0]["city"])
+    print(len(user["names"]))
 
-m1()
+# m1()
+m2()
