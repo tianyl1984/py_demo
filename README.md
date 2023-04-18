@@ -7,3 +7,6 @@
 3. 执行 `& venv/Scripts/Activate.ps1` 激活环境
 
 
+pip install numpy
+
+pip install -r requirements.txt

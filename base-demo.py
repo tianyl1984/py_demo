@@ -90,7 +90,10 @@ def dict_demo():
     d['wangwu'] = 20
     print(d)
     print(d.get('wangwu'), 'wangwu' in d)
+    # 默认值
     print(d.get('wangwu1', 99))
+    # None
+    print(d.get('abc'))
     # 迭代
     for key in d:
         print(key, d[key])
@@ -165,4 +168,4 @@ def list_generator():
 
 # list_generator()
 
-str_demo()
+dict_demo()
