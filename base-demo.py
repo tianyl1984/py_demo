@@ -34,6 +34,18 @@ def str_demo():
     print(str.strip())
     print(' ' in str)
 
+def str_demo2():
+    tpl3 = """
+    "{name}": {{ // {desc}
+        "type": "{type}"
+    }},
+    """
+    str = tpl3.format(name='abc', desc='hehe', type='haha')
+    print(str)
+
+def str_demo3():
+    print('paymentOrderList.ddid'.replace('paymentOrderList.', ''))
+
 def op_demo():
     print('10/3=', 10 / 3)
     print('10//3=', 10 // 3)
@@ -102,6 +114,11 @@ def dict_demo():
     for key, val in d.items():
         print(key, '=', val)
 
+def dict_demo2():
+    d = {}
+    d['name'] = {}
+    d['name']['aaa'] = 1
+    print(d)
 
 def set_demo():
     s = set([1, 2, 3])
@@ -168,4 +185,10 @@ def list_generator():
 
 # list_generator()
 
-dict_demo()
+# dict_demo()
+
+dict_demo2()
+
+# str_demo2()
+
+# str_demo3()
